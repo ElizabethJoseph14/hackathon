@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Presentation Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+    </style>a
+</head>
+<body>
+    <div class="container" style="max-width: 500px;"> 
+        <h1>📊 Smart Presentation Generator</h1>
+        <form id="presentationForm">
+            
+            <div class="form-group">
+                <label for="name">👤 Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">🎯 Category:</label>
+                <select id="category" required>
+                    <option value="student">Student</option>
+                    <option value="educator">Educator</option>
+                    <option value="professional">Professional</option>
+                    <option value="startup">Startup</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="topic">📌 Presentation Topic:</label>
+                <input type="text" id="topic" placeholder="E.g. Artificial Intelligence" required>
+            </div>
+
+            <div class="form-group">
+                <label for="slides">📄 Number of Slides:</label>
+                <input type="number" id="slides" min="1" placeholder="e.g., 5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="keypoints">🗒 Key Points (comma separated):</label>
+                <textarea id="keypoints" placeholder="Point 1, Point 2, Point 3" required></textarea>
+            </div>
+
+            <button type="submit">🚀 Generate Presentation</button>
+        </form>
+
+        <div id="downloadLink" style="display: none;">
+            <a id="pptLink" download="Smart_Presentation.pptx">⬇ Download Presentation</a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
